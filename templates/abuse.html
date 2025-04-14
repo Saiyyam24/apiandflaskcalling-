@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    
+        <head>  
+    <title>Abuse Detection</title>
+        </head>
+    <body>
+        <h1>abuse detection</h1>
+        <form action = "/perform_abuse_detection" method = "post">
+            <label> please type here to detect </label><br>
+            <textarea name = abusetext> </textarea><br>
+            <input type = "submit" value="press to detect"> 
+        </form>
+        {% if result %}
+            {% for item in result %}
+            <p><strong>Detection:</strong>{{item['detect']}}</p>
+            <p><strong>confidence:</strong>{{item['confidence']}}</p>
+                
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>
