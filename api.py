@@ -1,6 +1,6 @@
 import nlpcloud
 
-client = nlpcloud.Client("finetuned-llama-3-70b", "c9d2afa731c4b91148c312fb414789e466a17c3e", gpu=True)
+client = nlpcloud.Client("finetuned-llama-3-70b", "<nlpcloud api key>", gpu=True)
 
 class ner_text:
     def ner_text(self,text):
